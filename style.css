@@ -216,3 +216,45 @@
 .plot-div p {
     line-height: 1.45rem;
 }
+
+@media (max-width: 1200px) {
+    .movie-list {
+        width: 60%;
+    }
+}
+
+@media (max-width: 900px) {
+    .movie-list {
+        width: 75%;
+    }
+
+    .big-text {
+        font-size: 2.2rem;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .movie-list {
+        width: 90%;
+    }
+    .title {
+        font-size: 1rem;
+    }
+    .movie-info-div span{
+        font-size: .75rem;
+        margin: 1rem 0;
+    }
+    .plot-div p {
+        font-size: .9rem;
+        line-height: 1.2rem;
+    }
+    .big-text {
+        font-size: 2rem;
+    }
+    .btn {
+        padding: 9px 11px 9px 10px;
+    
+        width: 100px;
+    }
+}
