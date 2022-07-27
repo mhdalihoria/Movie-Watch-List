@@ -15,7 +15,7 @@ function getMoviesFromLocalStorage() {
         let html = ``
         const lastIndex = moviesWatchlist.length-1
         moviesWatchlist.map((movie, index) => {
-            fetch(`http://www.omdbapi.com/?apikey=317bd43c&i=${movie}`)
+            fetch(`https://www.omdbapi.com/?apikey=317bd43c&i=${movie}`)
                 .then(res => res.json())
                 .then(data => {
                     const title = new Movie(data)

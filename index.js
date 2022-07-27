@@ -10,14 +10,14 @@ function searchResults() {
     document.querySelector('.movie-list').innerHTML = ``
     let searchQuery = searchBar.value
     
-    fetch(`http://www.omdbapi.com/?apikey=317bd43c&s=${searchQuery}`)
+    fetch(`https://www.omdbapi.com/?apikey=317bd43c&s=${searchQuery}`)
         .then(res => res.json())
         .then(async data => {
             if (data.Response === "True"){
                 const lastIndex = data.Search.length-1
                 let html = ``
                 data.Search.map((movie, index) => {
-                    fetch(`http://www.omdbapi.com/?apikey=317bd43c&i=${movie.imdbID}`)
+                    fetch(`https://www.omdbapi.com/?apikey=317bd43c&i=${movie.imdbID}`)
                         .then(res => res.json())
                         .then(data => {
                             const title = new Movie(data)
